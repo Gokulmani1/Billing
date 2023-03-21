@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Billing</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+           
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container cont">
+        <div class="row bg-secondary text-center">
+            <div class="col-lg-4">&nbsp;</div>
+            <div class="col-lg-4">
+                <h1 style="color: aqua;">Billing</h1>
+            </div>
+            <div class="col-lg-4">&nbsp;</div>
+        </div>
+        <div class="row mt-5 d-flex text-center">
+            <div class="col-lg-4">
+
+                <label>
+                    <h5 style="color: rgb(175, 31, 60);">Name :</h5>
+                </label>
+
+                <input type="text" style="border:none; outline-color: darkgray;" id="name" class="form-outline w-50"
+                    placeholder="Customer-Name" size="20" required />
+            </div>
+
+
+            <div class="col-4 lg">
+                <label>
+                    <h5 style="color: rgb(163, 36, 61);">Phone-number :</h5>
+                </label>
+                <input type="text" style="border:none; outline-color: darkgray;" class="form-outline w-50" id="num"
+                    placeholder="Customer-Phonenumber" required />
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-4-lg">&nbsp;</div>
+            <div class="col-4-lg table-responsive">
+                <table id="bill" style="border: 7px solid black;" class=" table  table-hover text-center">
+                    <thead
+                        style="  color: rgb(255, 0, 51);   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: xx-large;">
+                        <th>S.No</th>
+                        <th>Menu</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h4>1</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Idly</h4>
+                                </label></td>
+                            <td>
+                                <h4>10</h4>
+                            </td>
+                            <td><input type="checkbox" class="form-outline w-25" size="20" id="chbox1" value="10"
+                                    onchange="ch1()" />&nbsp;<input type="number" style="border:none;"
+                                    class="form-outline w-50" size="10" id="quantity1" min="1" disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>2</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Dosa</h4>
+                                </label></td>
+                            <td>
+                                <h4>55</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox2" value="55" onchange="ch2()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity2" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>3</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Upma</h4>
+                                </label></td>
+                            <td>
+                                <h4>35</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox3" value="35" onchange="ch3()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity3" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>4</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Juice</h4>
+                                </label></td>
+                            <td>
+                                <h4>30</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox4" value="30" onchange="ch4()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity4" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>5</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Milk Shakes</h4>
+                                </label></td>
+                            <td>
+                                <h4>50</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox5" value="50" onchange="ch5()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity5" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>6</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Sandwich</h4>
+                                </label></td>
+                            <td>
+                                <h4>30</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox6" value="30" onchange="ch6()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity6" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>7</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Extra Butter</h4>
+                                </label></td>
+                            <td>
+                                <h4>10</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox7" value="10" onchange="ch7()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity7" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>8</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Spl Chutney</h4>
+                                </label></td>
+                            <td>
+                                <h4>12</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox8" value="12" onchange="ch8()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity8" min="1"
+                                    disabled /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>9</h4>
+                            </td>
+                            <td><label for="chbox1">
+                                    <h4>Spl Sambhar</h4>
+                                </label></td>
+                            <td>
+                                <h4>15</h4>
+                            </td>
+                            <td><input type="checkbox" size="20" id="chbox9" value="15" onchange="ch9()" />&nbsp;<input
+                                    type="number" style="border:none;" class="form-outline w-50" id="quantity9" min="1"
+                                    disabled /></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" onclick="calculate()">Calculate</button>
+            </div>
+            <div class="col-4-lg">&nbsp;</div>
+        </div>
+        <div class="row ">
+            <div class="col-4-lg">&nbsp;</div>
+            <div class="col-4-lg table-responsive">
+                <table id="bill" class=" table table-bordered table-hover text-center">
+                    <thead
+                        style="color: rgb(255, 0, 51);   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: x-large;">
+                        <th>S.No</th>
+                        <th>Customer-Name</th>
+                        <th>Customer Ph.NO</th>
+                        <th>Billamount</th>
+                        <th>Discount amount</th>
+                        <th>Total Bill</th>
+                    </thead>
+                    <tbody id="detail">
+                    </tbody>
+            </div>
+        </div>
+
+
+        <script>
+            var result = 0;
+
+            function ch1() {
+                let a = document.getElementById("chbox1");
+                var b = document.getElementById("quantity1");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                } else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch2() {
+                let a = document.getElementById("chbox2");
+                var b = document.getElementById("quantity2");
+                if (a.checked) {
+
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                } else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch3() {
+                let a = document.getElementById("chbox3");
+                var b = document.getElementById("quantity3");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                }
+                else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch4() {
+                let a = document.getElementById("chbox4");
+                var b = document.getElementById("quantity4");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                }
+                else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch5() {
+                let a = document.getElementById("chbox5");
+                var b = document.getElementById("quantity5");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                }
+                else {
+                    b.disabled = true;
+                    b.setAttribute("value", "");
+                }
+            }
+            function ch6() {
+                let a = document.getElementById("chbox6");
+                var b = document.getElementById("quantity6");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.setAttribute("value", 1);
+                    b.focus();
+                } else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch7() {
+                let a = document.getElementById("chbox7");
+                var b = document.getElementById("quantity7");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                }
+                else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch8() {
+                let a = document.getElementById("chbox8");
+                var b = document.getElementById("quantity8");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                }
+                else {
+                    b.disabled = true;
+                    b.value = "";
+                }
+            }
+            function ch9() {
+                let a = document.getElementById("chbox9");
+                var b = document.getElementById("quantity9");
+                if (a.checked) {
+                    b.disabled = false;
+                    b.focus();
+                    b.setAttribute("value", 1);
+                }
+                else {
+                    b.disabled = true;
+                    b.setAttribute("value", "");
+                }
+            }
+            function calculate() {
+                let a = document.getElementById("chbox1");
+                var b = document.getElementById("quantity1").value;
+                var name = document.getElementById("name");
+                var num = document.getElementById("num");
+                var tbody = document.getElementById("detail");
+                var count = 1;
+                var withoutdiscount = 0;
+                var discountamount = 0;
+
+                if (a.checked) {
+                    result += a.value * b;
+
+                }
+
+                let c = document.getElementById("chbox2");
+                var d = document.getElementById("quantity2").value;
+                if (c.checked) {
+                    result += c.value * d;
+
+                }
+
+
+                let e = document.getElementById("chbox3");
+                var f = document.getElementById("quantity3").value;
+                if (e.checked) {
+                    result += e.value * f;
+
+                }
+
+
+                let i = document.getElementById("chbox4");
+                var j = document.getElementById("quantity4").value;
+                if (i.checked) {
+                    result += i.value * j;
+
+                }
+
+
+                let k = document.getElementById("chbox5");
+                var l = document.getElementById("quantity5").value;
+                if (k.checked) {
+                    result += k.value * l;
+
+                }
+
+
+                let m = document.getElementById("chbox6");
+                var n = document.getElementById("quantity6").value;
+                if (m.checked) {
+                    result += m.value * n;
+                }
+
+
+                let o = document.getElementById("chbox7");
+                var p = document.getElementById("quantity7").value;
+                if (o.checked) {
+                    result += o.value * p;
+                }
+
+
+                let q = document.getElementById("chbox8");
+                var r = document.getElementById("quantity8").value;
+                if (q.checked) {
+                    result += q.value * r;
+                }
+
+                let g = document.getElementById("chbox9");
+                var h = document.getElementById("quantity9").value;
+                if (g.checked) {
+                    result += g.value * h;
+                }
+                console.log("value-4", result);
+                if (result > 0) {
+                    withoutdiscount += result;
+                }
+                else {
+                    alert("Invalid Quantity  :(");
+                    location.reload();
+                }
+                console.log("withoutDiscount", withoutdiscount);
+
+                if ((result > 1200) && (result < 2000)) {
+                    result = result - (result * (5 / 100));
+                    discountamount = result - (result * (5 / 100));
+                    console.log("above 1200", discountamount);
+
+                }
+                else if (result > 2000) {
+                    result = result - (result * (8.5 / 100));
+                    discountamount = result - (result * (8.5 / 100));
+                    console.log("above 2000", discountamount);
+                }
+                else {
+                    console.log("s", result)
+                }
+
+                let tb = document.getElementById("detail");
+                let tr = document.createElement("tr");
+                tr.setAttribute("class", "tr");
+
+                let td = document.createElement("td");
+                td.setAttribute("class", "td");
+                tr.appendChild(td);
+
+                let td1 = document.createElement("td");
+                let value1 = document.createTextNode(name.value);
+                td1.appendChild(value1);
+                tr.appendChild(td1);
+
+                let td2 = document.createElement("td");
+                let value2 = document.createTextNode(num.value);
+                td2.appendChild(value2);
+                tr.appendChild(td2);
+
+                let td3 = document.createElement("td");
+                let value3 = document.createTextNode(withoutdiscount);
+                td3.appendChild(value3);
+                tr.appendChild(td3);
+
+                let td4 = document.createElement("td");
+                let value4 = document.createTextNode(discountamount);
+                td4.appendChild(value4);
+                tr.appendChild(td4);
+
+                let td5 = document.createElement("td");
+                let value5 = document.createTextNode(result);
+                td5.appendChild(value5);
+                tr.appendChild(td5);
+
+                tb.appendChild(tr);
+
+
+                result = 0;
+
+                name.value = "";
+                num.value = ""
+
+            }
+
+
+        </script>
+
+
+        <style>
+            body {
+                counter-reset: Serial;
+            }
+
+            table {
+                border-collapse: separate;
+            }
+
+            .tr .td:first-child:before {
+                counter-increment: Serial;
+                content: counter(Serial);
+            }
+        </style>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
